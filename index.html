@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Glam Studio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+        }
+
+        /* Encabezado rosa */
+        .header-top {
+            background-color: #f8a8b8;
+            padding: 25px;
+            text-align: center;
+            color: white;
+        }
+
+        .header-top h1 {
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+
+        .header-top p {
+            font-size: 15px;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        /* Barra de navegación amarilla */
+        nav {
+            background-color: #f2c920;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 0 20px;
+            text-decoration: none;
+            color: #222;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 5px 8px;
+        }
+
+        nav a:hover {
+            background-color: #e0b800;
+            border-radius: 3px;
+        }
+
+        /* Secciones de contenido */
+        .contenido {
+            padding: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .seccion {
+            display: none;
+        }
+
+        #inicio {
+            display: block;
+        }
+
+        /* Tarjetas de marcas */
+        .grid-marcas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .tarjeta {
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+        }
+
+        .logo-marca {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 40px 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .info-marca {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .info-marca h3 {
+            color: #d6486b;
+            margin-bottom: 8px;
+            font-size: 17px;
+        }
+
+        .info-marca p {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.4;
+        }
+
+        /* Listas de marcas y productos */
+        .lista {
+            line-height: 1.8;
+            font-size: 15px;
+            color: #333;
+        }
+
+        .lista li {
+            margin-bottom: 12px;
+        }
+
+        .lista strong {
+            color: #d6486b;
+        }
+
+        /* Contacto y redes */
+        .redes p {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .redes a {
+            color: #d6486b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .redes a:hover {
+            text-decoration: underline;
+        }
+
+        /* Pie de página */
+        .creditos {
+            text-align: right;
+            padding: 20px 30px;
+            font-weight: bold;
+            color: #444;
+            font-size: 15px;
+            border-top: 1px solid #eee;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <div class="header-top">
+        <h1>Beauty Glam Studio</h1>
+        <p>"Resalta tu belleza con estilo y color"</p>
+    </div>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <a onclick="mostrarSeccion('inicio')">Inicio</a>
+        <a onclick="mostrarSeccion('marcas')">Marcas</a>
+        <a onclick="mostrarSeccion('productos')">Productos</a>
+        <a onclick="mostrarSeccion('contacto')">Contacto</a>
+    </nav>
+
+    <div class="contenido">
+        <!-- SECCIÓN INICIO: Catálogo -->
+        <div id="inicio" class="seccion">
+            <div class="grid-marcas">
+                <!-- Maybelline -->
+                <div class="tarjeta">
+                    <div class="logo-marca">MAYBELLINE<br>NEW YORK</div>
+                    <div class="info-marca">
+                        <h3>Maybelline</h3>
+                        <p>Marca reconocida por sus bases, labiales y máscaras de pestañas. Ofrece maquillaje moderno y accesible para todo tipo de piel.</p>
+                      
+                    </div>
+                </div>
+
+                <!-- MAC -->
+                <div class="tarjeta">
+                    <div class="logo-marca">MAC</div>
+                    <div class="info-marca">
+                        <h3>MAC Cosmetics</h3>
+                        <p>Marca profesional famosa por su gran variedad de colores y productos utilizados por maquillistas profesionales.</p>
+                    </div>
+                </div>
+
+                <!-- Rare Beauty -->
+                <div class="tarjeta">
+                    <div class="logo-marca">Rare Beauty</div>
+                    <div class="info-marca">
+                        <h3>Rare Beauty</h3>
+                        <p>Marca moderna creada para resaltar la belleza natural con productos ligeros y de excelente calidad.</p>
+                    </div>
+                </div>
+
+                <!-- Fenty Beauty -->
+                <div class="tarjeta">
+                    <div class="logo-marca">FENTY BEAUTY</div>
+                    <div class="info-marca">
+                        <h3>Fenty Beauty</h3>
+                        <p>Marca de lujo con amplia gama de tonos, tecnología avanzada y productos diseñados para todas las pieles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN MARCAS -->
+        <div id="marcas" class="seccion">
+            <h2 style="color:#d6486b; margin-bottom:20px;">Marcas que manejamos</h2>
+            <ul class="lista">
+                <li><strong>Maybelline:</strong> Marca económica y accesible, ideal para uso diario, con productos de buena cobertura y colores variados.</li>
+                 <img src="maybelling logo.png">
+                <li><strong>MAC Cosmetics:</strong> Línea profesional, colores intensos, resistentes y usados en pasarelas, cine y televisión.</li>
+                      <img src="MAC Cosmeticspng.png">
+                <li><strong>Rare Beauty:</strong> Marca inclusiva, enfocada en sentirse bien, con fórmulas ligeras y acabados naturales.</li>
+              <img src="Rare_beauty.webp" width="250" height="200">
+              
+                <li><strong>Fenty Beauty:</strong> Innovadora y diversa, famosa por tener tonos para cada tono de piel, acabados de lujo y alta duración.</li>
+                         <img src="Fenty_beauty_logo.png">                      
+            </ul>
+        </div>
+
+        <!-- SECCIÓN PRODUCTOS -->
+        <div id="productos" class="seccion">
+            <h2 style="color:#d6486b; margin-bottom:20px;">Tipos de Productos</h2>
+            <ul class="lista">
+                <li><strong>Maquillaje Facial:</strong> Bases de maquillaje, correctores, polvos traslúcidos, rubores, iluminadores, bronceadores y prebases.</li>
+              <img src="descarga (3).jpg">
+                <li><strong>Ojos:</strong> Sombras de ojos, delineadores, máscaras de pestañas, lápices para cejas, sombras en crema y delineadores líquidos.</li>
+                <img src="descarga.jpg">
+                <li><strong>Labios:</strong> Labiales en barra, labiales líquidos, brillos labiales, delineadores de labios y tintas.</li>
+                  <img src="descarga (4).jpg">
+                  <li><strong>Accesorios y cuidado:</strong> Fijadores de maquillaje, esponjas, brochas y productos para preparar la piel.</li>
+           <img src="images (3).jpg">
+                </ul>
+        </div>
+
+        <!-- SECCIÓN CONTACTO / REDES -->
+        <div id="contacto" class="seccion">
+            <h2 style="color:#d6486b; margin-bottom:20px;">Contáctanos y Síguenos</h2>
+            <div class="redes">
+                <p>📷 Instagram: <a href="#">@BeautyGlamStudio</a></p>
+                <p>👍 Facebook: <a href="#">Beauty Glam Studio MX</a></p>
+                <p>📘 TikTok: <a href="#">@beautyglamstudio</a></p>
+                <p>📧 Correo: contacto@beautygalmstudio.com</p>
+                <p>📞 WhatsApp: +52 772 139 7482</p>
+                <p>📍 Ubicación: santiago de anaya, centro cultural</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Créditos -->
+    <div class="creditos">
+        Elaborado por Ashley y krisbell
+    </div>
+
+    <!-- Código para cambiar de sección -->
+    <script>
+        function mostrarSeccion(nombre) {
+            // Ocultar todas
+            let secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(s => s.style.display = 'none');
+            // Mostrar la elegida
+            document.getElementById(nombre).style.display = 'block';
+        }
+    </script>
+
+</body>
+</ht
